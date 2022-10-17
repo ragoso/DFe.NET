@@ -7,7 +7,7 @@ using System.IO;
 
 namespace NFe.Danfe.OpenFast
 {
-    public class DanfeOpenFastBase
+    public class DanfeOpenFastBase : IDisposable
     {
         public Report Relatorio { get; protected set; }
 
@@ -167,6 +167,11 @@ namespace NFe.Danfe.OpenFast
             {
                 throw ex;
             }
+        }
+
+        public void Dispose()
+        {
+            Relatorio.Dispose();
         }
     }
 }
