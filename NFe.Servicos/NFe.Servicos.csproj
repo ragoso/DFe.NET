@@ -1,17 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net462;netstandard2.0;net6.0</TargetFrameworks>
-		
+		<TargetFrameworks>net462;netstandard2.0;net6.0;net7.0</TargetFrameworks>
+
 	</PropertyGroup>
 
-	<!--Todos que iniciam com 4... -->
+	<!--Todos
+	que iniciam com 4... -->
 	<ItemGroup Condition="$(TargetFramework.StartsWith('net4'))">
 		<Reference Include="System.Web.Services" />
 		<ProjectReference Include="..\NFe.Wsdl\NFe.Wsdl.csproj" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' or '$(TargetFramework)' == 'net6.0'">
+	<ItemGroup
+		Condition="'$(TargetFramework)' == 'netstandard2.0' or '$(TargetFramework)' == 'net6.0' or '$(TargetFramework)' == 'net7.0'">
 		<ProjectReference Include="..\NFe.Wsdl.Standard\NFe.Wsdl.Standard.csproj" />
 	</ItemGroup>
 
