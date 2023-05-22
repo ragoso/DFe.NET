@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
-		
+		<TargetFrameworks>netstandard2.0;net6.0;net7.0</TargetFrameworks>
+
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,7 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ConsultaGtin\" />
+		<Folder Include="ConsultaGtin\" />
 	</ItemGroup>
 
 	<Import Project="..\Shared.NFe.Wsdl\Shared.NFe.Wsdl.projitems" Label="Shared" />
